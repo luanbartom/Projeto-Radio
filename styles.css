@@ -207,3 +207,127 @@ h2{
     margin-left: 5%;
 
 }
+
+/* Estilos para os cards das rádios abertas */
+.radio-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 5%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.radio-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.radio-card h2 {
+    margin: 0 0 15px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    text-align: center;
+}
+
+.radio-card audio {
+    width: 100%;
+    border-radius: 8px;
+    height: 50px;
+}
+
+/* Estilo para o player de áudio */
+.radio-card audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.radio-card audio::-webkit-media-controls-play-button {
+    background-color: #1db954;
+    border-radius: 50%;
+}
+
+.radio-card audio::-webkit-media-controls-play-button:hover {
+    background-color: #1ed760;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .radio-card {
+        margin: 10px 2%;
+        padding: 15px;
+        width: 96%;
+    }
+    
+    .radio-card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .radio-card audio {
+        height: 40px;
+    }
+    
+    .cards-plano {
+        width: 95vw;
+        height: auto;
+        min-height: 80vh;
+        padding: 10px;
+    }
+    
+    .cards-plano__title {
+        font-size: 2rem;
+        margin: 2vw 2vw 1vw 2vw;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+        margin: 10px;
+    }
+    
+    .header-menu__sobre {
+        gap: 1vw;
+        font-size: 0.9rem;
+        padding: 1vw 2vw 1vw 1vw;
+    }
+    
+    .header-menu__sobre a {
+        padding: 0.8vw 1.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .radio-card {
+        margin: 8px 1%;
+        padding: 12px;
+        width: 98%;
+    }
+    
+    .radio-card h2 {
+        font-size: 1rem;
+    }
+    
+    .cards-plano__title {
+        font-size: 1.5rem;
+        margin: 1.5vw 1.5vw 0.5vw 1.5vw;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .header-menu__sobre {
+        flex-direction: column;
+        gap: 0.5vw;
+    }
+    
+    .header-menu__sobre a {
+        padding: 0.6vw 1vw;
+        font-size: 0.8rem;
+    }
+}

@@ -20,8 +20,8 @@
 
             <nav class="header-menu">
                 <ul class="header-menu__sobre">
-                    <li><a href="#" class="header-menu__sobre--active">Rádios Spotify</a></li>
-                    <li><a href="#" >Rádios abertas</a></li>
+                    <li><a href="#" class="header-menu__sobre--active" onclick="trocarRadios('spotify')">Rádios Spotify</a></li>
+                    <li><a href="#" onclick="trocarRadios('abertas')">Rádios abertas</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
@@ -30,41 +30,8 @@
         <h1 class="main-title">Escolha sua rádio</h1>
 
         <section class="cards">
-            <div class="cards-plano">
-                <h2 class="cards-plano__title">RADIOS COMPARTILHADAS!</h2>
-                <h2>AC/DC</h2>
-                <iframe 
-                    data-testid="embed-iframe" 
-                    style="border-radius:12px; align-self: center;" 
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1E4sEEhVjuqbvL?utm_source=generator" 
-                    width="90%"
-                    height="152" 
-                    frameBorder="0" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-                </iframe>
-                <h2>STONE TEMPLE PILOTS</h2>
-                <iframe 
-                    data-testid="embed-iframe" 
-                    style="border-radius:12px; align-self: center;" 
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1E4tOykeUuFlZm?utm_source=generator" 
-                    width="90%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-            </iframe>
-                <h2>AUDIOSLAVE</h2>
-                <iframe 
-                    data-testid="embed-iframe" 
-                    style="border-radius:12px; align-self: center;"
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1E4krzwreZaRxr?utm_source=generator" 
-                    width="90%" 
-                    height="152" 
-                    frameBorder="0"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-            </iframe>
+            <div class="cards-plano" id="conteudo-radios">
+                <!-- Conteúdo das rádios será carregado dinamicamente -->
             </div>
         </section>
 
@@ -74,5 +41,7 @@
             <div class="rodape-direitos">
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html> 
